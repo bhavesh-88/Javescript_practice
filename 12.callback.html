@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- callback function - complete run one function and run default a function automatically called callback function -->
+    <!-- callback function always give as perameter -->
+    <SCript>
+
+        let sayhello = () => {
+           console.log("hello");
+        }
+        let sayhii = () => {
+            console.log("hii");
+        }
+
+        let hy = () =>{
+            console.log("hy");
+        }
+
+        function multi(a,b,callback) {
+            console.log(a*b);
+            callback()
+        }
+        function add(a,b,callback){
+            console.log(a+b);
+            callback()
+            // sayhello()
+        }
+
+        // sayhello()
+        // sayhii()
+        add(2,5,sayhii)
+    </SCript>
+</body>
+
+</html>

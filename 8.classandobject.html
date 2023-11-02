@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let studant1 = "mahesh"
+        console.log(`${studant1}`);
+
+        // class is the blue print of structore/our code whose help create multiple objects
+        // Object - obj is the instance/part of class
+
+        // one class - multiple Object
+        // one obj = one class
+
+        class Addmisionform{
+            submit() {
+                alert( this.name + " your form was submited")
+            }
+            cancle() {
+                alert( this.name + " your form was chancelled")
+            }
+            fill(givename){
+                this.name = givename
+            }
+        }
+
+        let mahesh = new Addmisionform()
+        console.log(mahesh);
+        mahesh.fill("bhavesh")
+        mahesh.submit()
+
+        let ramesh = new Addmisionform()
+        ramesh.fill("ramesh")
+        ramesh.cancle()
+
+    </script>    
+</body>
+</html>

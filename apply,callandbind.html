@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let userDetails={
+        //     name:"bhavesh",
+        //     age:22,
+        //     designation:"web developer",
+        //     printdetails:function(){
+        //         console.log(this.name); // this is the object itself
+        //     }
+
+        // }
+
+        // userDetails.printdetails();
+
+        // let userDetail2={
+        //     name:"rajver",
+        //     age:21,
+        //     designation:"python developer",
+        // }
+
+        // userDetails.printdetails.call(userDetail2);
+
+
+        let printdetails = function (state, country) {
+            console.log(this.name + " " + state + " " + country); // this is the global object
+        }
+
+        let userDetails = {
+            name: "bhavesh",
+            age: 22,
+            designation: "web developer",
+        }
+
+        printdetails.call(userDetails, "delhi", "india");
+        // printdetails.call(userDetails,['delhi',"indai"]);
+
+        let userDetail2 = {
+            name: "rajver",
+            age: 21,
+            designation: "python developer",
+        }
+
+        //call
+        // printdetails.call(userDetail2,"raj","india");
+        //apply
+        printdetails.apply(userDetail2, ["raj", "india"]);  // only take one arg as array
+        // bind
+        let printt = printdetails.bind(userDetail2, ["raj", "india"]);  // store in a var and invoke later
+        let print = printdetails.bind(userDetail2, "raj", "india");  // store in a var and invoke later
+        printt();
+        print();
+
+
+
+
+        let name = {
+            name: "bhavesh",
+        }
+
+        function hello(age, profession) {
+            return "hello " + this.name + " is " + age + " and is an " + profession
+        }
+
+        console.log(hello.call(name, 21, "developer"))
+        console.log(hello.apply(name, [21, "developer"]))
+
+        let bing = hello.bind(name)
+        console.log(bing(21, "python"));
+    </script>
+</body>
+
+</html>

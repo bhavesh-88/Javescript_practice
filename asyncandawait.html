@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // async js 
+        // callback,Promise,synce/await use in async js
+
+
+
+        // arrary of obj
+        const datas = [
+            { name: 'bhavesh', age: 22 },
+            { name: 'rajveer', age: 20 },
+        ];
+
+        function getdata() {
+            setTimeout(() => {
+                let output = "";
+                datas.forEach((data, index) => {
+
+                    output += `<li>${data.name}<li>`;
+                    // output+= `<li>${index}<li>`;
+                });
+                document.body.innerHTML = output
+            }, 2000);
+        }
+        // getdata();
+
+        function creatdata(newdata) {
+            setTimeout(() => {
+                datas.push(newdata);
+            }, 4000);
+        }
+        // getdata();
+        // creatdata({name:'manav',age:20})
+        
+
+
+        // callback
+        // function creatdata(newdata,callback) {
+
+        //     setTimeout(() => {
+        //         datas.push(newdata);
+        //         callback()
+        //     }, 4000);
+        // }
+        // creatdata({name:'manav',age:20},getdata)
+
+
+
+        // promises
+        // take to arg
+        // function creatdata(newdata) {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             datas.push(newdata);
+        //             let error = false;
+
+        //             if (!error) {
+        //                 resolve("sab sahi hai");
+        //             } else {
+        //                 reject("kuch sahi nahi hai ")
+        //             }
+        //         }, 4000);
+        //     })
+        // }
+        // creatdata({name:'manav',age:20}).then(getdata).catch((err) => {
+        //     console.log(reject);
+        // })
+
+
+        // creatdata({ name: 'manav', age: 20 }).then(resolve => {
+        //     console.log(resolve);
+        //     return getdata();
+
+        // }).catch(err => {
+        //     console.log(err);
+        // })
+
+
+
+        // async
+        async function start() {
+            await creatdata({ name: 'manav', age: 20 })
+            getdata();
+
+        }
+
+        start();
+    </script>
+</body>
+
+</html>

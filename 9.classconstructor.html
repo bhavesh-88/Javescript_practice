@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- constructor - runtime on change -->
+    <script>
+
+        class product{
+            constructor(productname, productprice, productmodel, productdiscount){
+                this.productname = productname,
+                    this.productprice = productprice,
+                    this.productmodel = productmodel,
+                    this.productdiscount = productdiscount
+            }
+        }
+
+        let newcar = new Product("ford", 6800000, "mustangGT", "5%")
+        console.log(newCar);
+        // console.log(newcar.Productdiscount ?? "10%" );
+
+
+        let bike = new Product("R15" , 200000, "yamaha" , 0)
+        // let bike = new Product("R15" , 200000, "yamaha" , 123)
+        console.log(bike);
+
+    </script>    
+</body>
+
+</html>

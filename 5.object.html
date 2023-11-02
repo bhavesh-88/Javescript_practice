@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // let array = [12,23,23,12];
+
+        let person = {
+            fname : "bhavesh",
+            lname : "malviya",
+            age : 23,
+            mobile : 12321231,
+
+
+            salary : function () {
+                return 30000;
+            },
+            salary2 : function () {
+                return 40000;
+            },
+            hobbies : ["criket", "SWIMING", "dance"],
+
+            fullname : function ()  {
+                return this.fname + " " + this.lname;
+            },
+
+            dblslary : function (){
+                return this.salary() , this.slary2();
+                console.log("calld");
+            }
+
+        }
+
+        console.log(person);
+            document.write(person.fname)
+           document.write(person.lname)
+           document.write(person.age)
+           document.write(person.mobile)
+           console.log(person.salary());
+        console.log(person.hobbies);
+        console.log(person.hobbies[0]);
+
+        console.log(person.fullname());
+        console.log(person.fname.concat(this.salary(),this.salary2()))   ;
+
+        console.log(person.dblslary());
+
+    </script>
+</body>
+</html>

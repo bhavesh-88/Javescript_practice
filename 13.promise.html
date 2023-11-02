@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+    // promise is a state that a time is pending(state)    
+    // promise is any identification of our code jo resolved and rejected(state)
+    // promise when provided than our code excecute than kiya hona chahiye
+    // promise when provided than our code  was rejected than kiya hona chahiye
+
+
+    //  promise is a state jo manipulate our code/data  
+    //  code will excecute thane ye hone chahiye
+    //  code will rejected thane ye nona chahiye
+
+
+    // let friend = true
+
+    function promise(friend) {
+        return new Promise(function(sec, den){
+            if(friend){
+                sec("your friend is True")
+            }else{
+                den("your friend is not true")
+            };
+        });
+    }
+
+
+    // let incode = (result) =>{
+    //     console.log(result);
+    // }
+    
+    // let outcode = (error) =>{
+    //     console.log(error);
+    // }
+
+
+    // console.log(promise);
+    console.log(promise(true));
+    // console.log(promise(false));
+
+    // promise(true).then(console.log("done"));
+    // promise(false).catch(console.log(outcode));
+
+
+
+
+    // const promise = new Promise((resolve, reject) => {
+    //     let a = false;
+    //     if (a) {
+    //         resolve("promise is resoleve")
+    //     }
+    //     else{
+    //         reject("promise is rejected")
+    //     }
+    // })
+    // promise.then((result)=>{
+    //     console.log(result);
+    // }).catch((error)=>{
+    //     console.log(error);
+    // })
+
+        
+    // let complate = false
+        // function promise(complate) {
+        //     return new Promise(function (sec, den) {
+        //         if (complate) {
+        //             sec("hello");
+        //         }
+        //         else {
+        //             den("error");
+        //         }
+        //     })
+        // }
+        // let incode = (result) => {
+        //     console.log(result);
+        // }
+        // let outcode = (error) => {
+        //     console.log(error);
+        // }
+        // console.log(promise);
+        // promise(true).then(incode)
+        // promise(false).catch(outcode)
+
+
+
+
+
+        
+
+
+
+        // javascript is a sycromus and unsycromus 
+        // execute line by line 
+        // random order
+        // console.log("hello");
+        // // console.log("hello2");
+        
+        // setTimeout(() => {
+        //     console.log("hello2");
+        // }, 2000);
+
+        // console.log("hello3");
+   </script> 
+</body>
+</html>
